@@ -12,22 +12,124 @@
 </head>
 <body id="index">
 
+    <section class="detail p-5">
+        <div class="nutx">X</div>
+        <div class="mainContent container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 left">                  
+                    <img src="../images/sp/sp1.jpg" alt="" />
+                </div>
+                
+                <div class="col-12 col-lg-6 right">
+                    <div class="row">
+                        <div class="col-12 mt-5">
+                                                        
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td style="width:60%;"><h3><b>Mã sản phẩm</b></h3></td>
+                                        <td style="width:40%;"><h5>GCH6543645</h5></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td style="width:60%;"><h3><b>Tên sản phẩm</b></h3></td>
+                                        <td style="width:40%;"><h5><input type="text" value="Máy bay điều khiển từ xa" required/></h5></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width:60%;"><h3><b>Ảnh sản phẩm</b></h3></td>
+                                        <td style="width:40%;"><h5><input type="file" class="form-control-file" name="" id="fileThem" placeholder="" aria-describedby="fileHelpId"></h5></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width:60%;"><h3><b>Giá sản phẩm</b></h3></td>
+                                        <td style="width:40%;"><h5><input type="text" value="500.000" required/> VNĐ</h5></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width:60%;"><h3><b>Tình trạng</b></h3></td>
+                                        <td style="width:40%;"><h5><input type="text" value="Còn hàng" required/></h5></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="rdTinhTrang" value="1" checked> Còn hàng
+                                                    </label>
+                                                    </div>
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="rdTinhTrang" value="0"> Hết hàng
+                                                    </label>
+                                                </div>
+                            
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="chkGiam" id="" value="1">
+                                                        Giảm giá
+                                                    </label>
+                                                    <label class="form-check-label ml-5">
+                                                        <input type="checkbox" class="form-check-input" name="chkTang" id="" value="1">
+                                                        HOT
+                                                    </label>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            
+                        </div>
+                        <div class="col-12">
+                            <h3 class="text-center mt-3 mb-3">Thông tin chi tiết</h3 class="">
+                        </div>
+                        <div class="content-detail col-12">
+                            <textarea class="form-control" name="txtDetail" id="editor1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cum asperiores fugit eum sunt adipisci nostrum labore eos praesentium repudiandae eveniet ea aut nihil sequi fugiat nobis, ipsum amet non.</p>
+                                <p>pisicing elit. Animi cum asperiores fugit eum sunt adipisci nostrum labore eos praesentium repudiandae eveniet ea aut nihil sequi fugiat nobis, ipsum amet non.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cum asperiores fugit eum sunt adipisci nostrum labore eos praesentium repudiandae eveniet ea aut nihil sequi fugiat nobis, ipsum amet non.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cum asperiores fugit eum sunt adipisci nostrum labore eos praesentium repudiandae eveniet ea aut nihil sequi fugiat nobis, ipsum amet non.</p>
+                            </textarea>                            
+                        </div>
+
+                        <div class="col-12 mt-5">
+                            <button type="button" class="btn btn-primary btn-block">Thay đổi</button>
+                        </div>
+                    </div>                 
+                </div>
+                
+            </div>
+        </div>
+    </section>      
+    <!-- End detail -->
+    
+    <section class="den">
+
+    </section>
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Chào mừng: NamHandsome</a>
+        <div class="navbar-brand" href="#">Chào mừng: NamHandsome</div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Quản lý sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Chính sửa giao diện</a>
+                </li>
+            </ul>
             <span class="navbar-text">
                 <a href="">Đăng xuất</a>
             </span>
         </div>
     </nav>
 
-    <section class="container-fluid">
+    <section class="container-fluid main">
         <div class="row">
-            <div class="col-12 col-md-4 p-5">
-                <form action="#" method="post">
+            <div class="col-12 col-md-4 p-5 left">
+                <div class="themsp">
                     <div class="form-group">
                         <label>Mã sản phẩm</label>
                         <input type="text" class="form-control" placeholder="Nhập mã sản phẩm" />
@@ -35,6 +137,10 @@
                     <div class="form-group">
                         <label>Tên sản phẩm</label>
                         <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" />
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh sản phẩm</label>
+                        <input type="file" class="form-control-file" name="" id="fileThem" placeholder="" aria-describedby="fileHelpId">
                     </div>
                     <div class="form-group">
                         <label>Giá sản phẩm</label>
@@ -50,20 +156,22 @@
                             <input class="form-check-input" type="radio" name="rdTinhTrang" value="0"> Hết hàng
                         </label>
                     </div>
+
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="chkGiam" id="" value="1">
+                            Giảm giá
+                        </label>
+                        <label class="form-check-label ml-5">
+                            <input type="checkbox" class="form-check-input" name="chkTang" id="" value="1">
+                            HOT
+                        </label>
+                    </div>
                     <div class="form-group">
                       <label>Thông tin chi tiết</label>
                       <textarea class="form-control" name="txtDetail" id="editor"></textarea>
                     </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="chkGiam" id="" value="1">
-                        Giảm giá
-                      </label>
-                      <label class="form-check-label ml-5">
-                        <input type="checkbox" class="form-check-input" name="chkTang" id="" value="1">
-                            HOT
-                        </label>
-                    </div>
+                    
 
                     <div class="form-group">
                         <label>Giá giảm</label>
@@ -71,23 +179,20 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6 mt-3">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Thêm</button>
-                        </div>
-                        <div class="col-md-6 mt-3">
-                            <button type="reset" class="btn btn-primary btn-lg btn-block">Reset</button>
+                        <div class="col-md-12 mt-3">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Thêm</button>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
             
-            <div class="col-12 col-md-8 p-5">
+            <div class="col-12 col-md-8 p-5 right">
                 <form class="search" action="">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
                 </form>
                 <div class="row mt-3">
-                    <div class="col-12 col-md-3">
+
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
                             <div class="card-header">GCH6543645</div>
                             <div class="card-body">
@@ -100,7 +205,94 @@
                         </div>
                     </div>  
                     
-                    <div class="col-12 col-md-3">
+
+                    
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">GCH6543645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+                    
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">GCH6543645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+                    
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">GCH6543645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+                    
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">GCH6543645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+                    
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">GCH6543645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+                    
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">GCH6543645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+                    
+
+
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
                             <div class="card-header">GCH6543645</div>
                             <div class="card-body">
@@ -113,7 +305,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
                             <div class="card-header">GCH6543645</div>
                             <div class="card-body">
@@ -127,7 +319,7 @@
                     </div> 
                     
                     
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
                             <div class="card-header">GCH6543645</div>
                             <div class="card-body">
@@ -140,7 +332,7 @@
                         </div>
                     </div>  
                     
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
                             <div class="card-header">GCH6543645</div>
                             <div class="card-body">
@@ -151,11 +343,11 @@
                                 <span class="badge badge-pill badge-info">HOT</span>
                             </div>
                         </div>
-                    </div>
+                    </div>            
 
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
-                            <div class="card-header">GCH6543645</div>
+                            <div class="card-header">dCH65441243645</div>
                             <div class="card-body">
                                 <h5 class="card-title">Máy bay điều khiển từ xa</h5>
                                 <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
@@ -166,9 +358,9 @@
                         </div>
                     </div> 
                     
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
-                            <div class="card-header">GCH6543645</div>
+                            <div class="card-header">cCH65421343645</div>
                             <div class="card-body">
                                 <h5 class="card-title">Máy bay điều khiển từ xa</h5>
                                 <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
@@ -178,10 +370,91 @@
                             </div>
                         </div>
                     </div>  
+
                     
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
-                            <div class="card-header">GCH6543645</div>
+                            <div class="card-header">cCH65421343645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">cCH65421343645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">cCH65421343645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">cCH65421343645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">cCH65421343645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">cCH65421343645</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Máy bay điều khiển từ xa</h5>
+                                <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
+                                <span class="badge badge-pill badge-success">Còn hàng</span>
+                                <span class="badge badge-pill badge-warning">Giảm giá</span>
+                                <span class="badge badge-pill badge-info">HOT</span>
+                            </div>
+                        </div>
+                    </div>  
+
+
+                    
+                    <div class="col-12 col-md-3 motsp">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">cCH654323645</div>
                             <div class="card-body">
                                 <h5 class="card-title">Máy bay điều khiển từ xa</h5>
                                 <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
@@ -192,9 +465,9 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
-                            <div class="card-header">GCH6543645</div>
+                            <div class="card-header">bCH63243645</div>
                             <div class="card-body">
                                 <h5 class="card-title">Máy bay điều khiển từ xa</h5>
                                 <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
@@ -205,9 +478,9 @@
                         </div>
                     </div> 
                     
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
-                            <div class="card-header">GCH6543645</div>
+                            <div class="card-header">GCH21</div>
                             <div class="card-body">
                                 <h5 class="card-title">Máy bay điều khiển từ xa</h5>
                                 <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
@@ -218,9 +491,9 @@
                         </div>
                     </div>  
                     
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
-                            <div class="card-header">GCH6543645</div>
+                            <div class="card-header">aCH6544325</div>
                             <div class="card-body">
                                 <h5 class="card-title">Máy bay điều khiển từ xa</h5>
                                 <p class="card-text">Giá :  <span>100.000</span> VNĐ</p>
@@ -231,7 +504,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 motsp">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
                             <div class="card-header">GCH6543645</div>
                             <div class="card-body">
@@ -247,24 +520,6 @@
 
                 </div>      
                 <!-- End row -->
-
-                <div class="row mt-5">
-                    <div class="col-12">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -274,6 +529,7 @@
     <script src="../vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="./ckeditor/ckeditor.js"></script>
     <script>CKEDITOR.replace('editor');</script>
+    <script>CKEDITOR.replace('editor1');</script>
     <script src="../js/admin/myJs.js"></script>
 </body>
 </html>
