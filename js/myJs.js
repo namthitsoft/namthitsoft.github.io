@@ -1,6 +1,20 @@
 $(document).ready(function () {
-    
+
+// hiệu ứng laod isotope ***************************************
+    var hieuung = $('.main').isotope({
+        // options
+        itemSelector: '.motsp',
+        layoutMode: 'masonry'
+    });
+
+    // layout Isotope after each image loads
+    hieuung.imagesLoaded().progress( function() {
+        hieuung.isotope('layout');
+    });
+
+// Xử lý scroll ẩn hiện navbar *******************************
     var height = 150;
+    
     $(window).scroll(() => {
         if($(window).scrollTop() > height)
         {
@@ -10,23 +24,25 @@ $(document).ready(function () {
         {
             $("#navbar").removeClass("active");
         }
-    })
+    });
 
+// Add class avtive cho tất cả sản phẩm ***************************
     $(".motsp").addClass("active");
 
+// Xử lý nút filter danh mục *****************************    
     $(".filter button").click(function(){
         $(".filter button").removeClass("active");
         $(this).addClass("active");
         var cat = $(this).data("cat");
 
         hieuung.isotope({filter: cat});
-    })
+    });
 
+// Xử lý click cho một sp ****************************
     $(document).on('click', '.motsp', function() {
         $(".detail").addClass("active");
         $(".den").addClass("active");
     });
-
 
     $(".den").click(function(){
         $(this).removeClass("active");
@@ -38,7 +54,7 @@ $(document).ready(function () {
         $(".den").removeClass("active");
     })
 
-    // Xử lý nút Scroll to Top
+// Xử lý nút Scroll to Top********************************
     $(window).scroll(function () { 
         scrollFunction();
     });
@@ -51,13 +67,13 @@ $(document).ready(function () {
         } else {
             $("#myBtn").css("display","none");
         }
-    }
+    };
 
     // When the user clicks on the button, scroll to the top of the document
 
     $("#myBtn").click(function(){
         scrollToTop(600);
-    })
+    });
 
     function scrollToTop(scrollDuration) {
         const   scrollHeight = window.scrollY,
@@ -73,41 +89,13 @@ $(document).ready(function () {
                     } 
                     else clearInterval(scrollInterval); 
                 }, 15 );
-    }
-         
-    
+    };
 
-    // hiệu ứng laod isotope
-    var hieuung = $('.main').isotope({
-        // options
-        itemSelector: '.motsp',
-        layoutMode: 'masonry'
-    });
-
-    // layout Isotope after each image loads
-    hieuung.imagesLoaded().progress( function() {
-        hieuung.isotope('layout');
-    });
 
     // fake data
     $("#xemthem").click(function() { 
-        
+        var html = "";
         var cat = $(".filter button.active").data("cat");
-        var html = '';
-    
-        for(let i = 1; i <= 10; i++)
-        {
-            html += `<a class="motsp other active">
-                        <div class="card text-sm-center">
-                            <img class="card-img-top" src="images/sp/sp${i}.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
-                                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
-                                <p class="card-text new">100.000 VNĐ</p>
-                            </div>
-                        </div>
-                    </a>`;
-        }
 
         $('.main').append(html).isotope('reloadItems').isotope({ sortBy: 'original-order' });
         
