@@ -2,3 +2,56 @@
     padding: 0;
     margin: 0;
 }
+
+/* css form login ***************************** */
+#login .tieude{
+    margin-top: 10%;
+}
+
+#login #form{
+    border: 1px soldi black;
+    padding: 20px;
+    background: #2ecc71;
+    border-radius: 5px;
+}
+
+#login{
+    background: #bdc3c7;
+}
+
+
+/* Css search ***************** */
+/* Style the search field */
+#index form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+  
+  /* Style the submit button */
+#index form.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+  
+#index form.search button:hover {
+    background: #0b7dda;
+}
+  
+  /* Clear floats */
+#index form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin: auto;
+}
