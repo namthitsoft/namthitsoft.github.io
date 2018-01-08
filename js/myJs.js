@@ -12,6 +12,18 @@ $(document).ready(function () {
         hieuung.isotope('layout');
     });
 
+// Hiệu ứng wow
+    wow = new WOW(
+        {
+        boxClass:     'wow',     
+        animateClass: 'animated', 
+        offset:       0,          
+        mobile:       false,       
+        live:         true        
+    }
+  )
+  wow.init();
+
 // Xử lý scroll ẩn hiện navbar *******************************
     var height = 150;
 

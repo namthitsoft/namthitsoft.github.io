@@ -279,8 +279,9 @@ section.detail::before:hover{
 }
 
 
-html{
+body{
     position: relative;
+    overflow-x: hidden;
 }
 
 .den{
