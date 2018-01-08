@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 // Xử lý scroll ẩn hiện navbar *******************************
     var height = 150;
-    
+
     $(window).scroll(() => {
         if($(window).scrollTop() > height)
         {
@@ -92,15 +92,120 @@ $(document).ready(function () {
     };
 
 
+
+
+
+
+
+
+
+
     // fake data
     $("#xemthem").click(function() { 
-        var html = "";
+        var html = `<a class="motsp active boy">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp1.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>
+    
+    <a class="motsp active boy">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>
+
+    <a class="motsp active boy">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp3.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>
+
+    <a class="motsp active other">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp6.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>
+
+    <a class="motsp active other">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp7.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>
+
+    <a class="motsp active girl">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>
+
+    <a class="motsp active girl">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp10.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>
+
+    <a class="motsp active baby">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp5.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>
+
+    <a class="motsp active baby">
+        <div class="card text-sm-center">
+            <img class="card-img-top" src="images/sp/sp6.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                <p class="card-text new">100.000 VNĐ</p>
+            </div>
+        </div>
+    </a>`;
         var cat = $(".filter button.active").data("cat");
 
         $('.main').append(html).isotope('reloadItems').isotope({ sortBy: 'original-order' });
         
     });
 
-    
-
 });
+
+            

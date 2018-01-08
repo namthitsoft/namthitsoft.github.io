@@ -42,12 +42,19 @@ nav a{
     color: white;
 }
 
+/* Css tieude *********** */
+.tieude{
+    text-transform: uppercase;
+}
+
 /* css xem them ******************************/
 #xemthem{
+    outline: none!important;
+    box-shadow: none!important;
     background: pink;
     color: black;
     font-size: 25px;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 #xemthem:hover{
@@ -113,13 +120,39 @@ nav a{
     box-sizing: border-box;
 }
 
-.motsp.active{
+.motsp .giamgia{
+    position: absolute;
+    top: 0;
+    left: 1%;
+    display: none;
+}
+
+.motsp .hot{
+    position: absolute;
+    top: 0;
+    right: 1%;
+    display: none;
+}
+
+.motsp.sale .giamgia{
+    display: block;
+}
+
+.motsp.hot .hot{
     display: block;
 }
 
 .motsp:hover > .card{
-    color: black;
-    border: 1px solid #F62459;
+    transition: 0.4s;
+    box-shadow: 0 0px 10px 0 #F62459;   
+}
+
+.motsp img{
+    padding: 5px;
+}
+
+.motsp.active{
+    display: block;
 }
 
 .motsp p.card-text{
@@ -139,6 +172,29 @@ nav a{
 .motsp.sale p.card-text.old{
     display: block;
 }
+
+/* Css staff ************** */
+.staff {
+    background: #ffc0cb7d;
+    padding: 50px 0px;
+}
+
+.staff .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+.staff img {
+    border-radius: 5px 5px 0 0;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 
 /* Css detail ******************************** */
 .detail{
@@ -248,7 +304,7 @@ html{
 /* Css loader *************************** */
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 16px solid #F62459; /* Blue */
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -356,7 +412,7 @@ html{
     }
 
     .tieude h1{
-        font-size: 70px;
+        font-size: 60px;
         text-align: center;
     }
 
