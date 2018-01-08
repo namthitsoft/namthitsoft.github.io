@@ -18,30 +18,8 @@ $(document).ready(function () {
         $(".filter button").removeClass("active");
         $(this).addClass("active");
         var cat = $(this).data("cat");
-        if(cat == "*")
-        {
-            $(".motsp").addClass("active");
-        }
-        else if(cat == "boy")
-        {
-            $(".motsp").removeClass("active");
-            $(".motsp.boy").addClass("active");
-        }
-        else if(cat == "girl")
-        {
-            $(".motsp").removeClass("active");
-            $(".motsp.girl").addClass("active");
-        }
-        else if(cat == "baby")
-        {
-            $(".motsp").removeClass("active");
-            $(".motsp.baby").addClass("active");
-        }
-        else if(cat == "other")
-        {
-            $(".motsp").removeClass("active");
-            $(".motsp.other").addClass("active");
-        }
+
+        hieuung.isotope({filter: cat});
     })
 
     $(document).on('click', '.motsp', function() {
@@ -59,30 +37,6 @@ $(document).ready(function () {
         $(".detail").removeClass("active");
         $(".den").removeClass("active");
     })
-    
-    // fake data
-    $("#xemthem").click(function() { 
-        var cat = $(".filter button.active").data("cat");
-        var html = '';
-    
-        for(let i = 1; i <= 5; i++)
-        {
-            html += `<a class="motsp ${cat == "*" ? "" : cat} active">
-                        <div class="card text-sm-center">
-                            <img class="card-img-top" src="images/sp/sp${i}.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
-                                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
-                                <p class="card-text new">100.000 VNĐ</p>
-                            </div>
-                        </div>
-                    </a>`;
-        }
-
-        $(".card-columns").append(html);
-        
-    }); 
-
 
     // Xử lý nút Scroll to Top
     $(window).scroll(function () { 
@@ -121,6 +75,44 @@ $(document).ready(function () {
                 }, 15 );
     }
          
+    
+
+    // hiệu ứng laod isotope
+    var hieuung = $('.main').isotope({
+        // options
+        itemSelector: '.motsp',
+        layoutMode: 'masonry'
+    });
+
+    // layout Isotope after each image loads
+    hieuung.imagesLoaded().progress( function() {
+        hieuung.isotope('layout');
+    });
+
+    // fake data
+    $("#xemthem").click(function() { 
+        
+        var cat = $(".filter button.active").data("cat");
+        var html = '';
+    
+        for(let i = 1; i <= 10; i++)
+        {
+            html += `<a class="motsp other active">
+                        <div class="card text-sm-center">
+                            <img class="card-img-top" src="images/sp/sp${i}.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Ô tô điều khiển từ xa</h5>
+                                <p class="card-text text-muted old"><del>150.000 VNĐ</del></p>
+                                <p class="card-text new">100.000 VNĐ</p>
+                            </div>
+                        </div>
+                    </a>`;
+        }
+
+        $('.main').append(html).isotope('reloadItems').isotope({ sortBy: 'original-order' });
+        
+    });
+
     
 
 });

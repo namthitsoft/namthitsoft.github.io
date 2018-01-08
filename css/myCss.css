@@ -97,6 +97,11 @@ nav a{
     }
 }
 
+.main{
+    height: auto;
+    width: 100%;
+}
+
 /* css motsp */
 .motsp{
     cursor: pointer;
@@ -104,24 +109,16 @@ nav a{
     margin-bottom: .75rem;
     border-radius: 0.25rem;
     display: none;
+    box-sizing: border-box;
 }
 
 .motsp.active{
     display: block;
 }
 
-/* .motsp:hover > .card{
-    transition: 0.4s;
-} */
-
 .motsp:hover > .card{
     color: black;
     border: 1px solid #F62459;
-}
-
-.card-columns .card{
-    padding-bottom: .75rem;
-    margin-bottom: 0;
 }
 
 .motsp p.card-text{
@@ -287,9 +284,11 @@ html{
 /* Css responsive */
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 0px) and (max-width:767px) {
-    .card-columns{
-        column-count:1;
+
+    .motsp{
+        width: 100%;
     }
+
     .tieude h1{
         font-size: 30px;
         text-align: center;
@@ -305,8 +304,9 @@ html{
 
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .card-columns{
-        column-count:3;
+
+    .motsp{
+        width: 50%;
     }
 
     .tieude h1{
@@ -325,8 +325,10 @@ html{
 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-    .card-columns{
-        column-count:4;
+
+    .motsp{
+        width: 25%;
+        padding: 0px 5px;
     }
 
     .tieude h1{
@@ -345,8 +347,10 @@ html{
 
  /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .card-columns{
-        column-count:5;
+
+    .motsp{
+        width: 25%;
+        padding: 0px 5px;
     }
 
     .tieude h1{

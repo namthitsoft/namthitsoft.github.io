@@ -117,14 +117,14 @@
 
     <section class="container filter mb-3 mb-sm-4 mb-md-5">
         <button class="btn active m-2" data-cat="*">Tất cả</button>
-        <button class="btn m-2" data-cat="boy">Đồ chơi bé trai</button>
-        <button class="btn m-2" data-cat="girl">Đồ chơi bé gái</button>
-        <button class="btn m-2" data-cat="baby">Đồ chơi sơ sinh</button>
-        <button class="btn m-2" data-cat="other">Đồ chơi khác</button>
+        <button class="btn m-2" data-cat=".boy">Đồ chơi bé trai</button>
+        <button class="btn m-2" data-cat=".girl">Đồ chơi bé gái</button>
+        <button class="btn m-2" data-cat=".baby">Đồ chơi sơ sinh</button>
+        <button class="btn m-2" data-cat=".other">Đồ chơi khác</button>
     </section>
 
     <section class="container-fluid">
-        <section class="card-columns">
+        <section class="main">
 
             <a class="motsp sale girl">
                 <div class="card text-sm-center">
@@ -135,8 +135,7 @@
                         <p class="card-text new">100.000 VNĐ</p>
                     </div>
                 </div>
-            </a>
-            
+            </a>        
             
             <a class="motsp other">
                 <div class="card text-sm-center">
@@ -293,7 +292,7 @@
                 </div>
             </a>
 
-        </section>      <!-- End card-column -->
+        </section>      <!-- end main -->
     </section>  <!-- End ccontainer-fluid -->
 
     <section class="container mt-5 mb-5">
@@ -322,6 +321,8 @@
     <script src="vendor/jquery-3.2.1.slim.min.js"></script>
     <script src="vendor/popper.min.js"></script>
     <script src="vendor/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="js/myJs.js"></script>
 </body>
 </html>
